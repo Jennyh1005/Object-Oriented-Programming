@@ -1,11 +1,23 @@
-Object
+Object:
 - An object in Computer Science (CS) can be a variable, data structure, function, or method
 - It is a location in memory that holds a value referenced by an identifier
 - An object in Object Oriented Programming (OOP) is an instance of a class
 - It can be a variable, function, data structure or a combination of these.
 
-The OOP Paradigm
+The OOP Paradigm:
 - Object Oriented Programming (OOP) is a programming practice for designing modular, reusable software systems
 - OOP involves creating objects to represent entities in the program
 - OOP focuses on defining data rather than the input → processing → output logic, which distinguishes it from procedure-oriented programming
 - The goal of OOP is to create objects that have defined functionality to solve problems.
+
+- Procedure-oriented programming focuses on fulfilling human requirements such as calculations, logical evaluations, and repetitive tasks
+- OOP involves creating an object representing a human and defining its attributes such as name, address and functions it can perform
+- OOP focuses on how to manipulate the data of an object rather than the logic required to manipulate them.
+
+- An object is a combination of data and functional code, representing a real-world object that has states and behaviors
+- An object is an instance of a class
+- States are the measurable data that describe the characteristics of an object
+- Behaviors are the available functionality of an object, indicating what it can do
+- An object's data is called attributes
+- An object's code is called methods.
+
