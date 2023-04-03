@@ -64,11 +64,22 @@ Polymorphism and Inheritance:
 
 Override and Polymorphism with Python:
 - Overriding and polymorphism are fundamental concepts in Python
-- They allow for two different classes to have the same attributes and methods, and for a child class to use an overridden method differently from its parent class
+- They allow for two different classes to have the same attributes and methods.
+- For a child class to use an overridden method differently from its parent class
 - Built-in methods and operators can also be overridden for custom objects, sometimes called "magic methods".
 
+- example
+"class Dog:
+	def __init__(self,name):
+		self.__name = name
+	
+	def __str__(self):
+		return “Woof, I’m %s.” % self.__name
 
+corgi = Dog(“Tobasco”)
+print(corgi) → “Woof, I’m Tobasco.”"
 
-
-
-
+Why override built-in methods and operators?
+- Can start to complete mathematical operations on custom Objects
+- Can start to compare equality between custom Objects
+- Therefore, you can start to manipulate how the Object behaves when met with built-in methods and operators
