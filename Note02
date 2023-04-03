@@ -41,3 +41,34 @@ Overloading and Overriding:
 - There is no overloading in Python 3.
 
 What is Polymorphism?
+- Polymorphism refers to a method that can be used across different classes and objects, depending on the parameters. 
+- The term "poly" means many, and "morphism" means forms. 
+- different classes can have the same named methods, and within a set of inherited classes, they can have the same methods too.
+
+Polymorphism and Inheritance:
+- Overloading is not supported in Python 3, but it is a form of Polymorphism. 
+- Polymorphism is the ability of a method to be used by different classes and objects depending on the parameters passed to it. 
+- In Python 3, Polymorphism can be achieved through Inheritance, where inherited classes modify inherited methods, i.e., Overriding.
+
+- example of Illegal Overloading
+"class Person:
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
+
+    def show(self):
+        return self.__name
+
+    def show(self, num):
+        return "%s %d" % (self.__name, self.__age)"
+
+Override and Polymorphism with Python:
+- Overriding and polymorphism are fundamental concepts in Python
+- They allow for two different classes to have the same attributes and methods, and for a child class to use an overridden method differently from its parent class
+- Built-in methods and operators can also be overridden for custom objects, sometimes called "magic methods".
+
+
+
+
+
+
