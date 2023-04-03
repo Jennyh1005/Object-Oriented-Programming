@@ -1,0 +1,22 @@
+Iterable Objects:
+- Iterable objects are those that can be iterated through like a sequence, such as strings and lists. 
+- We can access individual values without indexing using for loops. 
+- However, iterable doesn't always mean indexable, and we won't be covering indexable objects.
+
+- example: Printing all the cards in a Deck (Design Pattern)
+"class Deck:
+	… Code …
+	def __iter__(self):
+		return self
+
+	def __next__(self):
+		self.__index += 1
+		if self.__index == len(self.__cards):
+			self.__index = -1 # index reset
+			raise StopIteration
+		else:	
+			return self.__cards[self.__index]"
+      
+__iter__() and __next__():
+- __iter__() method returns an iterator object itself and __next__() method is used to get the next value of the iterator.
+- It's not necessary to set an index attribute for iteration, it can be implemented in various ways.
