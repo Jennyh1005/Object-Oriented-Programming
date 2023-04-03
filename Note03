@@ -1,0 +1,90 @@
+What is Inheritance?
+- Inheritance is when an object or class is based on another class, inheriting its features
+- There are three types of inheritance: single inheritance, multiple inheritance, and multilevel inheritance
+- Single inheritance is when a subclass inherits from a single superclass
+- Multiple inheritance is when a subclass inherits from multiple parent classes
+- Multilevel inheritance is when a subclass inherits from another subclass in a hierarchy
+- Inheritance can have a hierarchy and can also be a hybrid, mixing different types of inheritances.
+
+What can we do with Inheritance?
+- A child will receive all attributes and methods of the parent
+- A child can then enhance itself with new attributes and new methods
+- A child can OVERRIDE attributes and methods for their own liking/speciality
+
+If a child class inherits from a parent class, it does not need to create a new __init__() method unless it requires new attributes. Similarly, the child class does not need to redefine the parent's methods unless it wants to override them with its own implementation.
+
+Single Inheritance in Python 3:
+- example: Parent Class
+"class Person:
+  def __init__(self, name):
+  	self.__name = name 
+  
+  def getName(self):
+    return self.__name"
+    
+- example: Inherited Class
+"class Student(Person):
+  def __init__(self, name, num):
+    Person.__init__(self, name)
+    self.__sNum = num
+  
+  def getStudentName(self):
+    return("%s: %s" % (self.__sNum,self.getName()))"
+    
+- example: Execution
+"p = Person(“Mr. Park”)
+s = Student(“Random Child”, “1234”)
+print(p.getName()) # Output: “Mr. Park”
+print(s.getStudentName(), “and” , s.getName()) # Output: “1234: Random Child and Random Child”"
+
+What is super()?
+- The super() built-in method is used in classes to refer to their parent class, avoiding the need to use ParentClass.method(self). 
+- Using super() is preferred to avoid confusion when dealing with self in nested classes.
+
+- example: Parent Class
+"class Person:
+  def __init__(self, name):
+  	self.__name = name 
+  
+  def getName(self):
+    return self.__name"
+    
+- example: Inherited Class
+"class Student(Person):
+  def __init__(self, name, num):
+    super().__init__(name)
+    self.__sNum = num
+  
+  def getStudentName(self):
+    return("%s: %s" % (self.__sNum,self.getName()))"
+    
+- example: Execution
+"p = Person(“Mr. Park”)
+s = Student(“Random Child”, “1234”)
+print(p.getName())
+print(s.getStudentName(), “and” , s.getName())"
+
+Types of Multiple Inheritances:
+1.  Multi-Generational
+Grandparent → Parent → Child
+2. Multi-Parent (Not limited to two)
+Parent A \
+			> Child
+Parent B /
+
+3. Mixture of 1 and 2
+
+What is Polymorphism?
+- A method that can be used across different classes and object that is dependent on the parameters.
+
+Polymorphism in Inherited Classes:
+"class Parent:
+	def method(self):
+		pass
+
+class Child(Parent):
+	def method(self):
+		# something different
+		# Polymorphed to something else…
+		# Same method name!
+		pass"
