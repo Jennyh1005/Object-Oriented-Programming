@@ -10,14 +10,67 @@ The OOP Paradigm:
 - OOP focuses on defining data rather than the input → processing → output logic, which distinguishes it from procedure-oriented programming
 - The goal of OOP is to create objects that have defined functionality to solve problems.
 
+Conceptual Differentiation:
 - Procedure-oriented programming focuses on fulfilling human requirements such as calculations, logical evaluations, and repetitive tasks
 - OOP involves creating an object representing a human and defining its attributes such as name, address and functions it can perform
 - OOP focuses on how to manipulate the data of an object rather than the logic required to manipulate them.
 
+In-depth Analysis of an Object:
 - An object is a combination of data and functional code, representing a real-world object that has states and behaviors
 - An object is an instance of a class
 - States are the measurable data that describe the characteristics of an object
 - Behaviors are the available functionality of an object, indicating what it can do
 - An object's data is called attributes
 - An object's code is called methods.
+
+An example object we can create in OOP is a dog:
+- A dog object may have attributes such as name, color, breed, hungry, and thirsty
+- A dog object may have methods such as bark, eat, and sleep
+- Populating the dog's attributes (name, color, etc.) creates an instance of the dog object
+
+Classes & Objects:
+- In OOP, a class is an abstract description of all objects that can be created from it
+- An object is instantiated from a class
+- A class contains attributes, which are an object's accessible tools
+- Fields are variables that belong to an object or class
+- There are two types of fields: those that belong to an instance of the class and those that belong to the class itself
+- Methods are functions that the object or the object's class can call.
+
+OOP in Python 3:
+"Keyword: class"
+class | keyword | → A built-in keyword in Python 3 that allows to create our own classes.
+- Example:
+"# The Most Basic Class
+
+class ClassName: # Notice that Class names are capitalized
+	pass # An Empty Block
+#end of ClassName
+
+obj = ClassName()
+print(obj)"
+
+Create a Class:
+1. First define the name of the class with the keyword: class
+2. In its code block (indentation) define its attributes
+3. Then you can assign a variable with an instantiation of the class to interact with it
+- Make sure to use parentheses when calling the class name.
+- example: 
+"# Person Class
+class Person:
+	pass # An Empty Block
+#end of Person Class
+
+student1 = Person() #student1 is now a Person Object
+print(student1)"
+
+- example:
+"class Person:
+	def greet(self):
+		print(‘Hello, how are you?’)
+	#end of greet
+	#end of class Person
+	p = Person()
+	p.greet() # outputs the greet message … 
+	# the method is accessed with a period (.)
+	# Wait… what is the self????"
 
