@@ -74,3 +74,34 @@ print(student1)"
 	# the method is accessed with a period (.)
 	# Wait… what is the self????"
 
+The __init__ method & self parameter:
+- The init method is executed as soon as an object of the class is instantiated
+- It is used to initialize the object's attributes
+- The "self" parameter is used to denote that the method is applied and accessible for the object itself
+- "self" treats its own attributes as local
+- Double underscores are key hidden features of Python that allow us to overwrite Python features and hidden content.
+
+- example: person class
+"class Person:
+	def __init__(self, name):
+		self.name = name
+	#end of initialization
+	
+def greet(self): # the self parameter is always required
+		print(“Hello, my name is”, self.name)
+	#end of greet
+#end of class Person
+
+p = Person(‘Mr. Park’)
+p.greet()"
+
+Example: List
+L = [1,2,3,4]
+L is an instance of a <list class>; therefore, L is an object
+Features:
+L[i] → indexing … L[i:j] → Slicing
+functions → len(), min(), max()
+operators → + and *
+methods → L.append(), L.count(), L.extend(), L.sort(), L.reverse()
+
+NOTE: We didn’t need to know how these were coded, we just needed to know what list could do.
