@@ -1,0 +1,43 @@
+What is Encapsulation?
+- Encapsulation is a concept in OOP that involves information hiding, which restricts access to certain attributes and methods of a class or object. 
+- This is done for data protection and to limit the calling of certain methods. 
+- In Python, encapsulation is achieved through a special system that uses a double underscore __ as a prefix to hide attributes and methods.
+
+- example
+"class Student:
+  def __init__(self,nameF, nameL, num):
+    self.firstName = nameF
+    self.lastName = nameL
+    self.__studentNumber = num
+  
+  def __getStudentNumber(self):
+    return self.__studentNumber
+
+#end of Student
+"s1 = Student("Mr.", "Park", 10)
+print(s1.__getStudentNumber()) # Will cause an error
+print(s1.__studentNumber) # Will also cause an error"
+
+Importance of Encapsulation:
+class Student:
+  def __init__(self,nameF, nameL, num):
+    self.firstName = nameF
+    self.lastName = nameL
+    self.__studentNumber = num
+
+#end of Student
+
+s1 = Student("Mr.", "Park", 10)
+print(s1.firstName) # Returns/Outputs “Mr.”
+
+s1.firstName = "Ms."
+print(s1.firstName) # Returns/Outputs “Ms.”"
+
+Overloading and Overriding:
+- Overloading is having two methods in the same class with the same name but different parameters.
+- Overriding is having a method in a child class with the same name and parameters as a method in the parent class.
+- Overriding allows the child class to provide specific implementation for the method that exists in the parent class.
+- It is possible to override built-in magic-methods or base functions in Python.
+- There is no overloading in Python 3.
+
+What is Polymorphism?
